@@ -1,0 +1,19 @@
+@import 'bootstrap';
+@import 'bootstrap-icons';
+
+.navbar img[src*="logo_mini"] {
+    max-width: 5rem;
+}
+
+footer img[src*="logo_footer"] {
+    max-width: 7rem;
+}
+
+.bg-modal {
+    background-color: #000000cc
+}
+
+.label-search {
+    top: -1rem;
+}
+
