@@ -18,7 +18,7 @@ export default function AppTravelers({ filtered }) {
 
     return (
         <>
-            {modal && <AppModal tempTraveler={tempTraveler} setModal={setModal}   /> }
+            {modal && <AppModal tempTraveler={tempTraveler} setModal={setModal} />}
             <table className="table table-striped rounded">
                 <thead>
                     <tr>
@@ -29,9 +29,11 @@ export default function AppTravelers({ filtered }) {
                 <tbody>
                     {
                         filtered.map((traveler, index) => (
-                            <tr key={index} onClick={() => handlerClick(index)} >
-                                <td className="w-50">{traveler.name}</td>
-                                <td className="w-50">{traveler.surname}</td>
+                            <tr key={index} onClick={() => handlerClick(index)}>
+                                <td className="w-25">{traveler.name}</td>
+                                <td className="w-75 position-relative">{traveler.surname}
+                                    <i className="bi bi-binoculars-fill position-absolute end-0 me-2 me-sm-3 me-md-4 me-lg-5"></i>
+                                </td>
                             </tr>
                         ))
                     }

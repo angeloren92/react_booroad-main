@@ -20,11 +20,11 @@ export default function AppModal({ tempTraveler, setModal }) {
                             <ul className="list-group list-group-flush">
 
                                 <li className="list-group-item fs-3">
-                                    <i class="bi bi-postcard-heart"> </i>{tempTraveler.cf.toUpperCase()}</li>
+                                    <i className="bi bi-postcard-heart"> </i>{tempTraveler.cf.toUpperCase()}</li>
 
                                 <li className="list-group-item fs-3">
                                     <a href={`mailto:${tempTraveler.email}`} className="text-decoration-none text-black" >
-                                        <i class="bi bi-envelope-at-fill"> </i>{tempTraveler.email}</a>
+                                        <i className="bi bi-envelope-at-fill"> </i>{tempTraveler.email}</a>
                                 </li>
 
                                 <li className="list-group-item fs-3">

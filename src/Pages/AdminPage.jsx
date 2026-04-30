@@ -28,7 +28,6 @@ export default function AdminPage() {
 
             <div className="container">
                 <div className="row p-2 gap-2">
-
                     {
                         idTrip === -1 &&
                         <AppAdminTrip

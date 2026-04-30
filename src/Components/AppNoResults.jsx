@@ -5,7 +5,7 @@ export default function AppNoResults () {
     return(
 
         <div className="col col-12">
-            <h1>No results</h1>
+            <h1>Nessun risultato</h1>
         </div>
     )
 }

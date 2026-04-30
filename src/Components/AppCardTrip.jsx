@@ -14,7 +14,7 @@ export default function AppCardTrip({ trip }) {
                     <div className="col col-12 col-sm-6 d-flex flex-column position-relative">
 
                         <Link className="btn btn-outline-secondary align-self-end rounded-5 mx-4 position-absolute top-0 end-0" to={'/'}>
-                            <i class="bi bi-escape"> Back</i>
+                            <i className="bi bi-escape"> Back</i>
                         </Link>
 
                         <h2 className="my-2">{trip.destination}</h2>

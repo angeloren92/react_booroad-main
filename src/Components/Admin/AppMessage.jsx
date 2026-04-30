@@ -9,12 +9,12 @@ export default function AppMessage({ message, setShowMessage, setMessage, showMe
     useEffect(() => {
         if (showMessage) {
             const timer = setTimeout(() => {
-                setShowMessage(false);
-                setMessage('')
+                setShowMessage?.(false);
+                setMessage?.('')
             }, 3000);
             return () => clearTimeout(timer);
         }
-    }, [showMessage]);
+    }, [showMessage, setShowMessage, setMessage]);
 
     return (
         <>

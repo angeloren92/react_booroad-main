@@ -57,8 +57,8 @@ export default function AppAdminTraveler({ data, setData, showMessage, setShowMe
 
             <div className="col col-12 col-md-3 border py-3 position-relative">
 
-                <button  onClick={() => setIdTrip(-1)}   className="btn btn-outline-secondary align-self-end rounded-5 m-2 position-absolute top-0 end-0 label-search fs-6" to={'/'}>
-                    <i class="bi bi-escape"></i>
+                <button onClick={() => setIdTrip(-1)} className="btn btn-outline-secondary align-self-end rounded-5 m-2 position-absolute top-0 end-0 label-search fs-6" to={'/'}>
+                    <i className="bi bi-escape"></i>
                 </button>
 
                 <ul className="list-unstyled">
@@ -72,28 +72,76 @@ export default function AppAdminTraveler({ data, setData, showMessage, setShowMe
 
                         <div className="d-flex flex-column">
                             <label htmlFor="name">Nome</label>
-                            <input name="name" id="name" type="text" className="form-control-sm" value={formData.name} onChange={handleInput} required />
+                            <input
+                                name="name"
+                                id="name"
+                                type="text"
+                                className="form-control-sm"
+                                value={formData.name}
+                                onChange={handleInput}
+                                autoComplete="given-name"
+                                required
+                            />
                         </div>
 
                         <div className="d-flex flex-column">
                             <label htmlFor="surname">Cognome</label>
-                            <input name="surname" id="surname" type="text" className="form-control-sm" value={formData.surname} onChange={handleInput} required />
+                            <input
+                                name="surname"
+                                id="surname"
+                                type="text"
+                                className="form-control-sm"
+                                value={formData.surname}
+                                onChange={handleInput}
+                                autoComplete="family-name"
+                                required
+                            />
                         </div>
 
                         <div className="d-flex flex-column">
                             <label htmlFor="cf">Codice Fiscale</label>
-                            <input name="cf" id="cf" type="text" className="form-control-sm" value={formData.cf} onChange={handleInput} required />
+                            <input
+                                name="cf"
+                                id="cf"
+                                type="text"
+                                className="form-control-sm"
+                                value={formData.cf}
+                                onChange={handleInput}
+                                maxLength="16"
+                                pattern="^[a-zA-Z0-9]{16}$"
+                                title="Inserisci un Codice Fiscale valido di 16 caratteri alfanumerici"
+                                style={{ textTransform: 'uppercase' }} /* Aiuta visivamente l'utente */
+                                required
+                            />
                         </div>
 
                         <div className="d-flex flex-column">
                             <label htmlFor="email">Email</label>
-                            <input name="email" id="email" type="text" className="form-control-sm" value={formData.email} onChange={handleInput} required />
+                            <input
+                                name="email"
+                                id="email"
+                                type="email"
+                                className="form-control-sm"
+                                value={formData.email}
+                                onChange={handleInput}
+                                autoComplete="email"
+                                required
+                            />
                         </div>
-
 
                         <div className="d-flex flex-column">
                             <label htmlFor="number">Cellulare</label>
-                            <input name="number" id="number" type="text" className="form-control-sm" value={formData.number} onChange={handleInput} required />
+                            <input
+                                name="number"
+                                id="number"
+                                type="tel" /* Sostituito "number" con "tel" */
+                                className="form-control-sm"
+                                value={formData.number}
+                                onChange={handleInput}
+                                autoComplete="tel"
+                                pattern="[0-9+]*" /* Permette solo numeri e il simbolo + per i prefissi */
+                                required
+                            />
                         </div>
 
                         <span className="d-flex justify-content-center">
